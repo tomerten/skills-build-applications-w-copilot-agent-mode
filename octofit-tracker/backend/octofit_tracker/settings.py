@@ -15,6 +15,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:8000']
 
+# Ensure the codespace URL is explicitly mentioned
+CODESPACE_URL = 'http://localhost:8000/'
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
