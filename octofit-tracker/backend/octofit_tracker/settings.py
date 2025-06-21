@@ -18,6 +18,12 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'localhost:8000']
 # Ensure the codespace URL is explicitly mentioned
 CODESPACE_URL = 'http://localhost:8000/'
 
+# Add this near your other custom settings
+DJANGO_API_SUFFIX = '/api/'
+
+# If you want to construct the full endpoint, you could do:
+DJANGO_API_ENDPOINT = CODESPACE_URL.rstrip('/') + DJANGO_API_SUFFIX
+
 # Application definition
 INSTALLED_APPS = [
     'django.contrib.admin',
