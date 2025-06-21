@@ -100,6 +100,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Debug settings.py content
+        run: |
+          echo "Contents of settings.py:" && cat octofit-tracker/backend/octofit_tracker/settings.py
+
+      - name: Debug views.py content
+        run: |
+          echo "Contents of views.py:" && cat octofit-tracker/backend/octofit_tracker/views.py
+
       - name: Build message - step results
         id: build-message-step-results
         uses: skills/action-text-variables@v1
