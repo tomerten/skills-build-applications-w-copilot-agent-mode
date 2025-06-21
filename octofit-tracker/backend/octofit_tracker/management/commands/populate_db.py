@@ -13,6 +13,7 @@ class Command(BaseCommand):
             {'username': 'john_doe', 'email': 'john_doe@example.com', 'password': 'password123'},
             {'username': 'jane_doe', 'email': 'jane_doe@example.com', 'password': 'password123'},
         ]
+        # Adding test data for users, teams, activities, leaderboard, and workouts
         for user in users:
             db.users.update_one({'email': user['email']}, {'$set': user}, upsert=True)
 
